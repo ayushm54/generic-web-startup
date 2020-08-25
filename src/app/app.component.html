@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+<div fxLayout="row wrap">
+  <!-- 33% is the width of the card here we are deducting the 6px
+    margin applied on left and right by ngStyle -->
+  <div *ngFor="let item of items"
+   fxFlex="0 0 100%" fxFlex.gt-sm="0 0 calc(33% - 12px)"
+   [ngStyle.gt-sm]="{'margin.px': 6}" [ngStyle]="{'margin.px': 6, 'margin-bottom.px': 20}">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ item.title }}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="item.image" alt="item image">
+      <mat-card-content>
+        <p>{{ item.description }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+</div>

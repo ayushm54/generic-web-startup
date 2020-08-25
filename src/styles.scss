@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('~bootstrap/dist/css/bootstrap.min.css');
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+$mat-card-header-size: 30px;
+
+.mat-card-avatar{
+  height: $mat-card-header-size !important;
+  width: $mat-card-header-size !important;
+  border-radius: 50% !important;
+  flex-shrink: 0 !important;
+  object-fit: cover !important;
+  background: #000000 !important;
+}
+
+.material-input-full-width{
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
